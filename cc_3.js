@@ -1,19 +1,36 @@
-let customers = ["Chad", "Tanner", "Ryan"]; 
-let email = ["Chad@vsc.com", "Tanner@vsc.com", "Ryan@vsc.com"]; 
-let purchases = [
-    ["Nike", "Air Jordans", "ASICS"], // Chad's purchases
-    ["Adidas", "Puma", "Under Armor"], // Tanner's purchases
-    ["Converse", "Vans", "New Balance"] // Ryan's purchases 
-]
+// Step 2
+let customers = [
+    {name: "Chad", email: "Chad@vsc.com", purchases: ["Nike", "Air Jordans", "ASICS"]}, 
+    {name: "Tanner", email: "Tanner@vsc.com", purchases: ["Adidas", "Puma", "Under Armor"]}, 
+    {name: "Ryan", email: "Ryan@vsc.com", purchases: ["Converse", "Vans", "New Balance"]}
+]; 
 
 
-let newCustomer = "Parker"; 
-customers.push(newCustomer); 
+// Step 3 
+let newCustomer = [
+    {name: "Parker", email: "Parker@vsc.com", purchases: ["Adidas", "Nike"]}, 
+]; 
+customers.push(newCustomer[0]); 
+
 customers.shift(); 
 
-email[1]= "Tanner4@vsc.com"; 
+
+// Step 4
+customers[0].email= "Tanner4@vsc.com";
+
+let newPurchases = ["On Cloud"]; 
+
+customers[1].purchases.push(newPurchases[0]); 
 
 
-console.log(email[1]); 
+// Step 5
+customers.forEach((customers) => {console.log(`Customer Name: ${customers.name} 
+Customer Email: ${customers.email}
+Total Purchases: ${customers.purchases.length}
+--------------------------------------------------`)});
+ 
+
+
+
 
    
