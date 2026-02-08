@@ -29,7 +29,8 @@ let order3 = {
 
 let newCustomer = "Parker"; 
 customers.push(newCustomer); 
+customers.shift(); 
 
-console.log(customers[3]); 
+console.log(customers[0]); 
 
    
